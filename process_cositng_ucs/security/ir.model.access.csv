@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_mrp_bom_material_cost,mrp.bom.material.cost,model_mrp_bom_material_cost,mrp.group_mrp_user,1,1,1,1
+access_mrp_bom_labor_cost,mrp.bom.labor.cost,model_mrp_bom_labor_cost,mrp.group_mrp_user,1,1,1,1
+access_mrp_bom_overhead_cost,mrp.bom.overhead.cost,model_mrp_bom_overhead_cost,mrp.group_mrp_user,1,1,1,1
+access_mrp_production_material_cost,mrp.production.material.cost,model_mrp_production_material_cost,mrp.group_mrp_user,1,1,1,1
+access_mrp_production_labor_cost,mrp.production.labor.cost,model_mrp_production_labor_cost,mrp.group_mrp_user,1,1,1,1
+access_mrp_production_overhead_cost,mrp.production.overhead.cost,model_mrp_production_overhead_cost,mrp.group_mrp_user,1,1,1,1

@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="mrp_production_form_view_inherit_mrp_costing" model="ir.ui.view">
+        <field name="name">mrp.production.form.view.inherit.mrp.costing</field>
+        <field name="model">mrp.production</field>
+        <field name="inherit_id" ref="mrp.mrp_production_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header" position="inside">
+                <button name="action_compute_production_costs" string="Compute Costs" type="object" class="btn-secondary" invisible="state != 'draft'"/>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Direct Material Cost" name="direct_material_cost">
+                    <field name="prod_material_cost_ids">
+                        <tree editable="bottom">
+                            <field name="product_id"/>
+                            <field name="quantity"/>
+                            <field name="uom_id"/>
+                            <field name="unit_cost"/>
+                            <field name="total_cost" sum="Total"/>
+                            <field name="currency_id" column_invisible="1"/>
+                        </tree>
+                    </field>
+                </page>
+                <page string="Direct Labour Cost" name="direct_labor_cost">
+                    <field name="prod_labor_cost_ids">
+                        <tree editable="bottom">
+                            <field name="operation_id"/>
+                            <field name="workcenter_id"/>
+                            <field name="duration" widget="float_time"/>
+                            <field name="cost_per_hour"/>
+                            <field name="total_cost" sum="Total"/>
+                            <field name="currency_id" column_invisible="1"/>
+                        </tree>
+                    </field>
+                </page>
+                <page string="Direct Overhead Cost" name="direct_overhead_cost">
+                    <field name="prod_overhead_cost_ids">
+                        <tree editable="bottom">
+                            <field name="operation_id"/>
+                            <field name="workcenter_id"/>
+                            <field name="duration" widget="float_time"/>
+                            <field name="cost_per_hour"/>
+                            <field name="total_cost" sum="Total"/>
+                            <field name="currency_id" column_invisible="1"/>
+                        </tree>
+                    </field>
+                </page>
+                <page string="Costing Summary" name="costing_summary">
+                    <group>
+                        <group string="Estimated Costs">
+                            <field name="mrp_costing_method" invisible="1"/>
+                            <field name="currency_id" invisible="1"/>
+                            <field name="est_material_cost"/>
+                            <field name="est_labor_cost"/>
+                            <field name="est_overhead_cost"/>
+                            <field name="est_total_cost" class="oe_subtotal_footer_separator"/>
+                        </group>
+                        <group string="Actual Costs">
+                            <field name="act_material_cost"/>
+                            <field name="act_labor_cost"/>
+                            <field name="act_overhead_cost"/>
+                            <field name="act_total_cost" class="oe_subtotal_footer_separator"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>

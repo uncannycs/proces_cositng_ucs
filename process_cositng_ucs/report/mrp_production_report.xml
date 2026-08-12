@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="report_mrporder_inherit_mrp_costing" inherit_id="mrp.report_mrporder">
+        <xpath expr="//div[hasclass('page')]" position="inside">
+            <h3 class="mt-4">Costing Breakdown</h3>
+            <table class="table table-sm">
+                <thead>
+                    <tr>
+                        <th><strong>Category</strong></th>
+                        <th class="text-end"><strong>Estimated Cost</strong></th>
+                        <th class="text-end"><strong>Actual Cost</strong></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Direct Material Cost</td>
+                        <td class="text-end">
+                            <span t-field="o.est_material_cost"/>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.act_material_cost"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Direct Labour Cost</td>
+                        <td class="text-end">
+                            <span t-field="o.est_labor_cost"/>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.act_labor_cost"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Direct Overhead Cost</td>
+                        <td class="text-end">
+                            <span t-field="o.est_overhead_cost"/>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.act_overhead_cost"/>
+                        </td>
+                    </tr>
+                    <tr class="fw-bold">
+                        <td>Total Cost</td>
+                        <td class="text-end">
+                            <span t-field="o.est_total_cost"/>
+                        </td>
+                        <td class="text-end">
+                            <span t-field="o.act_total_cost"/>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </xpath>
+    </template>
+</odoo>
