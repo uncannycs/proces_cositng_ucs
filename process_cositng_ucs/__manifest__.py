@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': 'Manufacturing Process Costing UCS | MRP Process Costing | Advanced Manufacturing Costing | Production Costing | Work Center Costing | Direct Material Costing | Overhead Costing',
-    'version': '17.0.1.0',
+    'version': '18.0.1.0.0',
     'summary': 'Process Costing in Manufacturing, BOM Costing, Operation Costing',
     'description': """
 Manufacturing Process Costing

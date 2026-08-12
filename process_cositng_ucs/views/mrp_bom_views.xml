@@ -13,38 +13,38 @@
             <xpath expr="//notebook" position="inside">
                 <page string="Direct Material Cost" name="direct_material_cost">
                     <field name="bom_material_cost_ids">
-                        <tree editable="bottom">
+                        <list editable="bottom">
                             <field name="product_id"/>
                             <field name="quantity"/>
                             <field name="uom_id"/>
                             <field name="unit_cost"/>
                             <field name="total_cost" sum="Total"/>
                             <field name="currency_id" column_invisible="1"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
                 <page string="Direct Labour Cost" name="direct_labor_cost">
                     <field name="bom_labor_cost_ids">
-                        <tree editable="bottom">
+                        <list editable="bottom">
                             <field name="operation_id"/>
                             <field name="workcenter_id"/>
                             <field name="duration" widget="float_time"/>
                             <field name="cost_per_hour"/>
                             <field name="total_cost" sum="Total"/>
                             <field name="currency_id" column_invisible="1"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
                 <page string="Direct Overhead Cost" name="direct_overhead_cost">
                     <field name="bom_overhead_cost_ids">
-                        <tree editable="bottom">
+                        <list editable="bottom">
                             <field name="operation_id"/>
                             <field name="workcenter_id"/>
                             <field name="duration" widget="float_time"/>
                             <field name="cost_per_hour"/>
                             <field name="total_cost" sum="Total"/>
                             <field name="currency_id" column_invisible="1"/>
-                        </tree>
+                        </list>
                     </field>
                 </page>
                 <page string="Costing Summary" name="costing_summary">
