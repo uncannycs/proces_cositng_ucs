@@ -31,7 +31,7 @@ Key Features:
     'installable': True,
     'application': False,
     'auto_install': False,
-    'price': '0',
+    'price': '80',
     'currency': 'USD',
     'license': 'Other proprietary',
 }
